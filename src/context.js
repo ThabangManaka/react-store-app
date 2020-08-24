@@ -30,7 +30,7 @@ class ProductProvider extends Component {
         })
       }
       getItem = (id) => {
-        const product = this.state.products.find(item=>  item.id == id);
+        const product = this.state.products.find(item=>  item.id === id);
         return product;
       }
 
@@ -45,7 +45,7 @@ class ProductProvider extends Component {
   addToCart = (id) => {
     let tempProducts = [...this.state.products];
     const product = this.getItem(id);
-    const index = tempProducts.indexOf(product);
+    //const index = tempProducts.indexOf(product);
     product.inCart = true;
     product.count = 1;
     const price = product.price;
